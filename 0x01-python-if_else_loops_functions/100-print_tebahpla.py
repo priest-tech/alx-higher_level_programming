@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-print("".join(["{:c}".format(c-32 if c % 2 else c)
-      for c in range(122, 96, -1)]), end="")
+i = 0
+for c in range(ord('z'), ord('a') - 1, -1):
+    print("{}".format(chr(c - i)), end="")
+    i = 32 if i == 0 else 0 
