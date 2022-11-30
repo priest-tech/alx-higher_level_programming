@@ -4,6 +4,7 @@ Contains tests for Base class
 """
 
 import unittest
+import pep8
 import inspect
 import json
 from models import base
