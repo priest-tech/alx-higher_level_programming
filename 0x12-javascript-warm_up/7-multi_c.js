@@ -1,16 +1,15 @@
 #!/usr/bin/node
-const args = process.argv.slice(2);
+// Get the first argument
+const x = process.argv[2];
 
-if (args.length < 1) {
-  console.log('Missing number of occurences');
-  process.exit(1);
-}
-const numOccurences = parseInt(args[0]);
+// Convert the argument to an integer
+const num = parseInt(x);
 
-if (isNaN(numOccurences)) {
-  console.log('Missing number of occurences');
-  process.exit(1);
-}
-for (let i = 0; i < numOccurences; i++) {
-  console.log('C is fun');
+// Check if the argument is a valid integer
+if (isNaN(num)) {
+  // If the argument is not a valid integer, print an error message
+  console.log('Missing number of occurrences');
+} else {
+  // If the argument is a valid integer, print "C is fun" the specified number of times
+  console.log(Array(num + 1).join('C is fun\n'));
 }
